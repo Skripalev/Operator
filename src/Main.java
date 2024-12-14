@@ -30,14 +30,11 @@ public class Main {
         short years = 25;
         if (years >= 2 && years <= 6) {
             System.out.println("Если возраст человека равен " + years + ", то ему нужно ходить в детский сад.");
-        }
-        if (years >= 7 && years <= 17) {
+        } else if (years >= 7 && years <= 17) {
             System.out.println("Если возраст человека равен " + years + ", то ему нужно ходить в школу.");
-        }
-        if (years >= 18 && years <= 24) {
+        } else if (years >= 18 && years <= 24) {
             System.out.println("Если возраст человека равен " + years + ", то ему ему место в университете.");
-        }
-        if (years >= 24) {
+        } else if (years > 24) {
             System.out.println("Если возраст человека равен " + years + ", то ему пора ходить на работу.");
         }
 
@@ -54,11 +51,12 @@ public class Main {
         }
 
         System.out.println("Задача № 6");
-        byte numberOfSeats = 102;
-        if (numberOfSeats <= 60) {
+        byte numberOfPassengers = 70;
+        byte totalCapacity = 102;
+        byte seatingArea = 60;
+        if (numberOfPassengers < seatingArea) {
             System.out.println("В вагоне есть места, еще остались сидячие.");
-        }
-        if (numberOfSeats >= 60 && numberOfSeats < 102) {
+        } else if (numberOfPassengers < totalCapacity) {
             System.out.println("В вагоне есть места, но остались только стоячие.");
         } else {
             System.out.println("Мест нет!");
@@ -68,12 +66,18 @@ public class Main {
         long one = 135646545156165L;
         long two = 878945615165L;
         long three = 2615648484848548L;
-        if (one > two && one > three) {System.out.println("Наибольшее число "+one);}
-        else {
-        if (two > one && two > three) {System.out.println("Наибольшее число "+two);}
-        else {
-        if (three > two && three > one) {System.out.println("Наибольшее число "+three);}}
+        if (one > two && one > three) {
+            System.out.println("Наибольшее число " + one);
+        } else {
+            if (two > one && two > three) {
+                System.out.println("Наибольшее число " + two);
+            } else {
+                if (three > two && three > one) {
+                    System.out.println("Наибольшее число " + three);
+                }
+            }
 
 
+        }
     }
-}}
+}
